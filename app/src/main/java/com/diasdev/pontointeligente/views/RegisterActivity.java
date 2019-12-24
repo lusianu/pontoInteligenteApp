@@ -1,13 +1,13 @@
-package com.devmasterteam.tasks.views;
+package com.diasdev.pontointeligente.views;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.devmasterteam.tasks.R;
+import androidx.appcompat.app.AppCompatActivity;
+import com.diasdev.pontointeligente.R;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 

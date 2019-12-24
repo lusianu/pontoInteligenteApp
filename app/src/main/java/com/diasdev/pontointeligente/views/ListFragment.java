@@ -1,19 +1,19 @@
-package com.devmasterteam.tasks.views;
+package com.diasdev.pontointeligente.views;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.devmasterteam.tasks.R;
-import com.devmasterteam.tasks.adapter.TaskListAdapter;
-import com.devmasterteam.tasks.entities.TaskEntity;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.diasdev.pontointeligente.R;
+import com.diasdev.pontointeligente.adapter.ListAdapter;
+import com.diasdev.pontointeligente.entities.TaskEntity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +22,11 @@ public class ListFragment extends Fragment implements View.OnClickListener {
 
     private Context mContext;
     private List<TaskEntity> mTaskEntityList;
-    private TaskListAdapter mTaskListAdapter;
+    private ListAdapter mTaskListAdapter;
     private ViewHolder mViewHolder = new ViewHolder();
 
-    public static com.devmasterteam.tasks.views.ListFragment newInstance() {
-        com.devmasterteam.tasks.views.ListFragment fragment = new com.devmasterteam.tasks.views.ListFragment();
+    public static com.diasdev.pontointeligente.views.ListFragment newInstance() {
+        com.diasdev.pontointeligente.views.ListFragment fragment = new com.diasdev.pontointeligente.views.ListFragment();
         return fragment;
     }
 
@@ -39,7 +39,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Infla o layout
-        View rootView = inflater.inflate(R.layout.fragment_task_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
         // Incializa as variáveis
         this.mContext = rootView.getContext();
@@ -55,7 +55,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
 
         // 2 - Definir adapter passando listagem de itens
         this.mTaskEntityList = new ArrayList<>();
-        this.mTaskListAdapter = new TaskListAdapter(this.mTaskEntityList);
+        this.mTaskListAdapter = new ListAdapter(this.mTaskEntityList);
         this.mViewHolder.recylerTaskList.setAdapter(mTaskListAdapter);
 
         // 3 - Definir um layout
@@ -68,7 +68,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.float_add_task) {
-            startActivity(new Intent(this.mContext, TaskFormActivity.class));
+            startActivity(new Intent(this.mContext, FormActivity.class));
         }
     }
 

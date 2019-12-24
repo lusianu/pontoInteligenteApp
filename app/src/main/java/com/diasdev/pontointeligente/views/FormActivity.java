@@ -1,7 +1,6 @@
-package com.devmasterteam.tasks.views;
+package com.diasdev.pontointeligente.views;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +8,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.devmasterteam.tasks.R;
+import androidx.appcompat.app.AppCompatActivity;
+import com.diasdev.pontointeligente.R;
+
 
 public class FormActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,7 +19,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_form);
+        setContentView(R.layout.activity_form);
 
         // Inicializa variáveis
         this.mViewHolder.editDescription = (EditText) this.findViewById(R.id.edit_description);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.devmasterteam.tasks.views.RegisterActivity">
+    tools:context="com.diasdev.pontointeligente.views.RegisterActivity">
 
     <ScrollView
         android:layout_width="match_parent"
