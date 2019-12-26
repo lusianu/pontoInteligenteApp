@@ -1,4 +1,4 @@
-package com.diasdev.pontointeligente.repository;
+package com.diasdev.pontointeligente.repository.local;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
